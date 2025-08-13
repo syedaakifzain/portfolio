@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Aakif Zain - Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: radial-gradient(circle at top left, #0d0d1f, #121225, #0a0a18);
+        color: white;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    h1, h2 {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 1px;
+    }
+    header {
+        padding: 50px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: fadeInDown 1.2s ease-in-out;
+    }
+    .about {
+        max-width: 550px;
+        animation: fadeInLeft 1.5s ease;
+    }
+    .about h1 {
+        background: linear-gradient(90deg, #00f0ff, #a64bf4, #ff6ec7);
+        background-size: 300% 300%;
+        animation: gradientMove 5s ease infinite;
+        padding: 12px 24px;
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 2rem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .about p {
+        line-height: 1.6;
+        color: #dcdcdc;
+        font-size: 1.05rem;
+    }
+    .profile-img img {
+        width: 250px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(166, 75, 244, 0.8);
+        animation: float 4s ease-in-out infinite;
+    }
+    .section {
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        margin: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        transition: transform 0.4s, box-shadow 0.4s;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    .section.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.8s ease-out;
+    }
+    .section:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+    .skills img {
+        width: 60px;
+        margin: 15px;
+        transition: transform 0.4s, filter 0.4s;
+        filter: drop-shadow(0 0 10px rgba(0,255,255,0.7));
+        animation: iconFloat 6s infinite ease-in-out;
+    }
+    .skills img:hover {
+        transform: scale(1.3) rotate(5deg);
+        filter: drop-shadow(0 0 20px rgba(255,0,255,0.9));
+    }
+    .btn {
+        display: inline-block;
+        background: linear-gradient(90deg, #00f0ff, #a64bf4, #ff6ec7);
+        background-size: 300% 300%;
+        padding: 12px 24px;
+        margin: 10px 0;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.3s;
+        animation: gradientMove 4s ease infinite;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .btn:hover {
+        transform: scale(1.1);
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        margin-top: 40px;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+    }
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+    }
+    @keyframes iconFloat {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(3deg); }
+    }
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="about">
+        <h1>About Me</h1>
+        <p>Hi! My name is <em>Syed Aakif Zain</em>. <br> I am a Web Developer & Editor based in Davangere, Karnataka with experience through projects and subjects in university. <br><strong>My objective:</strong> Challenge myself in a new environment to learn, develop, improve my skills and contribute more to the company with my abilities.</p>
+        <a href="mailto:syedaakifzain21@gmail.com" class="btn">Email Me</a>
+        <a href="http://linkedin.com/in/syed-aakif-zain-ba6314352" target="_blank" class="btn">LinkedIn</a>
+        <a href="./saz.pdf" download="" class="btn">Resume</a>
+    </div>
+    <div class="profile-img">
+        <img src="./images/Remini20210919094315336.jpg" alt="Profile Photo">
+    </div>
+</header>
+
+<section class="section">
+    <h2>Education</h2>
+    <p>Bapuji Institute of Engineering and Technology</p>
+</section>
+
+<section class="section skills">
+    <h2>Technical Skills</h2>
+    <img src="./images/html-5.png"alt="HTML">
+    <img src="./images/css-3.png" alt="Css">
+    <img src="./images/java.png" alt="Javascript">
+    <img src="./images/sql.png" alt="sql">
+    <img src="./images/jsp-open-file-format-with-java-logo.png"alt="jsp">
+    <img src="./images/DaVinci-Resolve-Logo-1.png" alt="Davinci Resolve">
+</section>
+
+<section class="section">
+    <h2>Soft Skills</h2>
+    <ul>
+        <em>
+            <li>Teamwork</li>
+        <li>Communication</li>
+        <li>Critical Thinking</li>
+        <li>Time Management</li>
+        </em>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>Skill Set</h2>
+    <ul>
+        <li><em>Git</em></li>
+        <li><em>Web Design</em></li>
+        <li><em>Editing</em></li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>Languages</h2>
+    <p>English | Urdu | Kannada | Hindi </p>
+</section>
+
+<footer>
+    © 2025 Syed Aakif Zain. All Rights Reserved.
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('.section');
+    const revealOnScroll = () => {
+        sections.forEach(sec => {
+            const secTop = sec.getBoundingClientRect().top;
+            if (secTop < window.innerHeight - 100) {
+                sec.classList.add('visible');
+            }
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+</script>
+
+</body>
+</html>
